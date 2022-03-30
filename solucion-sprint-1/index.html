@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>AdaKitten</title>
+  </head>
+  <body>
+    <header class="header">
+      <section class="logo">
+        <img class="img" src="./img/favicon.png" alt="Logo de Adacats" />
+        <h1>AdaKitten</h1>
+        <nav class="menu-nav">
+          <ul class="menu">
+            <li class="item js-button-new-form">
+              <span class="fas fa-plus-circle"> </span>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <main>
+      <section class="new-form js-new-form collapsed">
+        <h2 class="title">¿Agregamos un nuevo gatito a Adalab?</h2>
+        <form class="form">
+          <input
+            class="input js-input-photo"
+            type="text"
+            placeholder="Url de la foto"
+            required
+          />
+          <input
+            class="input js-input-name"
+            type="text"
+            placeholder="Nombre"
+            required
+          />
+          <input class="input js-input-race" type="text" placeholder="Raza" />
+          <input
+            class="input js-input-desc"
+            type="text"
+            placeholder="Descripción"
+            required
+          />
+          <label class="js-label-error"></label>
+          <button class="button js-btn-add">Añadir</button>
+          <button class="button-cancel js-btn-cancel">Cancelar</button>
+        </form>
+      </section>
+
+      <section class="about-us">
+        <h1 class="title">AdaKitten</h1>
+        <h2 class="subtitle">Los gatos más molones de Adalab</h2>
+      </section>
+
+      <section class="search">
+        <h2 class="title">Filtrar / Buscar</h2>
+        <form class="form">
+          <input
+            class="input js_in_search_desc"
+            type="text"
+            placeholder="Descripción"
+          />
+          <input
+            class="input"
+            type="select"
+            name="raza"
+            placeholder="Raza"
+            id="raza"
+          />
+
+          <button class="button js-button-search">Buscar</button>
+        </form>
+      </section>
+
+      <section class="data js-data">
+        <ul class="list js-list"></ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <h3 class="subtittle">&copy; Adalab 2022</h3>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
