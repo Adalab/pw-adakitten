@@ -15,7 +15,7 @@ Os proponemos trabajar en AdaKitten🐈, una aplicación donde guardamos la info
 
 El objetivo de la aplicación es guardar información general sobre gatos, y hemos elegido hacerlo con los gatos de las Adalabers. Esta aplicación es replicable y extensible a cualquier temática: perros, listado de productos, contactos.
 
-![Adacats Aplicación](../img/adakitten/adakitten_template.png)
+![Adacats Aplicación](./img/adakitten_template.png)
 
 La aplicación está compuesta por una única página que contiene:
 
