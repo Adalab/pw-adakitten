@@ -9,44 +9,44 @@ La página contiene una sesión de filtros. En este ejercicio vamos a comenzar a
 1. Añade la clase `js_in_search_desc` al `input` para buscar por descripción
 2. Selecciona el `input` de buscar con el `document.querySelector`
 
-```js
-const input_search_desc = document.querySelector('.js_in_search_desc');
-```
+    ```js
+    const input_search_desc = document.querySelector('.js_in_search_desc');
+    ```
 
 3. Simula que escribe la usuaria en el `input` de búsqueda.
 
-```js
-input_search_desc.value = 'cariñoso';
-```
+    ```js
+    input_search_desc.value = 'cariñoso';
+    ```
 
 4. Recoge el valor del `input` en una variable.
 
-```js
-const descrSearchText = input_search_desc.value;
-```
+    ```js
+    const descrSearchText = input_search_desc.value;
+    ```
 
 5. Utiliza la función `includes` antes de añadir cada gatito para solo mostrar aquellos gatitos que contengan la palabra introducida por la usuaria:
 
-```js
-if( kittenDesc1.includes(descrSearchText) ) {
- //Completa el código
-}
+    ```js
+    if( kittenDesc1.includes(descrSearchText) ) {
+    //Completa el código
+    }
 
-if( kittenDesc2.includes(descrSearchText) ) {
- //Completa el código
-}
+    if( kittenDesc2.includes(descrSearchText) ) {
+    //Completa el código
+    }
 
-if( kittenDesc3.includes(descrSearchText) ) {
- //Completa el código
-}
-    ....
-```
+    if( kittenDesc3.includes(descrSearchText) ) {
+    //Completa el código
+    }
+        ....
+    ```
 
 6. ¿Qué pasa si modifico el valor del `input` a vacío? ¿Que muestra la página ahora?
 
-```js
-input_search_desc.value = '';
-```
+    ```js
+    input_search_desc.value = '';
+    ```
 
 #### 2. Mostrar/ocultar el formulario añadir
 
@@ -70,13 +70,13 @@ Para resolverlo:
 2.  Busca el elemento html y guarda el elemento en una variable utilizando el `document.queryselector(".js-new-form")`.
 3.  Utiliza un condicional para comprobar si la sección contiene la clase `collapsed`, y si es asi eliminarla/agregarla:
 
-```js
-if (formElement.classList.contains('collapsed')) {
-  //completa el código
-} else {
-  //completa el código
-}
-```
+    ```js
+    if (formElement.classList.contains('collapsed')) {
+      //completa el código
+    } else {
+      //completa el código
+    }
+    ```
 
 4. Prueba los dos posibles cambios en la página, elimina la clase `collapsed` manualmente y observa que sucede.
 
@@ -86,18 +86,18 @@ Valida la información de las razas, si el gatito no tiene la raza especificada 
 
 1. Crea una variable para almacenar el resultado de la comprobación:
 
-```js
-let html = '';
-```
+    ```js
+    let html = '';
+    ```
 
 2. Verifica si la raza de cada gatito tienen algún valor, y en dependencia del resultado de la comprobación muestra un mensaje o la raza si existe.
 
-```js
-if (kittenRace1 === "")) {
-  html = `No se ha especificado la raza`;
-} else {
-  html = race;
-}
-```
+    ```js
+    if (kittenRace1 === "")) {
+      html = `No se ha especificado la raza`;
+    } else {
+      html = race;
+    }
+    ```
 
 3. Piensa donde debemos hacer esta comprobación, ¿antes de pintar en el HTML?

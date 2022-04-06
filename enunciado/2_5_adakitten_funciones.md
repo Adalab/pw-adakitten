@@ -10,30 +10,34 @@ Crea dos funciones para mostrar u ocultar el formulario para añadir un nuevo ga
 2. Piensa si estas funciones: ¿Necesitan recibir parámetros? ¿Devolverán algún valor?
 3. Reutiliza el código ya programado para mostrar y ocultar el formulario y muevelo dentro de las funciones.
 
-```js
-function showNewCatForm() {
-  newFormElement.classList.remove('collapsed');
-}
-function hideNewCatForm() {
-  newFormElement.classList.add('collapsed');
-}
-```
+    ```js
+    function showNewCatForm() {
+      newFormElement.classList.remove('collapsed');
+    }
+    function hideNewCatForm() {
+      newFormElement.classList.add('collapsed');
+    }
+    ```
 
 4. Piensa: ¿Dónde vamos a utilizar estas funciones? ¿Estaría correcto utilizarlo dentro del evento `click` del botón?
 5. Como ya hemos aprendido a trabajar con funciones vamos a modificar como usamos los eventos, entonces primero declaro mi evento y la función manejadora:
 
-```js
-linkNewFormElememt.addEventListener('click', handleClickNewCatForm);
-```
+    ```js
+    linkNewFormElememt.addEventListener('click', handleClickNewCatForm);
+    ```
 
-6. Declaro la función manejadora y utilizo las funciones creadas anteriormente:
+6. Declaro la función manejadora y utilizo las funciones creadas anteriormente, ten en cuanta que `newFormElement` es el nombre de la variable que contiene el formulario:
 
-```js
-function handleClickNewCatForm(event) {
-  event.preventDefault();
-  //completa el código
-}
-```
+    ```js
+    function handleClickNewCatForm(event) {
+      event.preventDefault();
+      if (newFormElement.classList.contains('collapsed')) {
+        //completa el código
+      } else {
+        //completa el código
+      }
+    }
+    ```
 
 #### 2. Crear el gatito en HTML
 
@@ -43,13 +47,13 @@ Crea una función que se llame `renderKitten()` que reciba como parámetros todo
 
 En este ejercicio necesitas modificar el código que has trabajado en lecciones anteriores. Para ello:
 
-1. Crea la función `renderKitten()
+1. Crea la función `renderKitten()`
 
-```js
-function renderKitten(url, desc, name, race) {
-  //completa el código
-}
-```
+    ```js
+    function renderKitten(url, desc, name, race) {
+      //completa el código
+    }
+    ```
 
 2. ¿Cómo podrías usar esta función para generar y poner en la página el HTML de cada gatito que tenemos? Utiliza cada vez que necesites la función para mostrar el listado de gatitos.
 
@@ -57,14 +61,14 @@ function renderKitten(url, desc, name, race) {
 
 Haz una nueva función `addNewKitten(event)` asociada al evento clic del botón añadir para extraer el código que realizamos en la clase de ayer para validar el formulario de una nuevo gatito.
 
-```js
-//modifica el evento para cumplir una función manejadora
-buttonAdd.addEventListener('click', addNewKitten);
+    ```js
+    //modifica el evento para cumplir una función manejadora
+    buttonAdd.addEventListener('click', addNewKitten);
 
-function addNewKitten(event) {
-  //mueve el código que está dentro del evento
-}
-```
+    function addNewKitten(event) {
+      //mueve el código que está dentro del evento
+    }
+    ```
 
 #### 4. Cancelar nuevo gatito
 
@@ -73,14 +77,14 @@ Haz una nueva función `cancelNewKitten(event)` asociada al evento clic del bot�
 - Si ayer completaste el **ejercicio 4 Cancelar formulario"** puedes modificar el código para incluir la función manejadora del evento.
 - Sino haz el código necesario dentro de esta función para ocultar la sección del formulario de añadir un nuevo gatito cuando el usuario de clic en el botón cancelar. Recuerda también limpiar los valores de los `inputs`.
 
-```js
-const buttonCancelForm = document.querySelector('.js-btn-cancel');
-buttonAdd.addEventListener('click', cancelNewKitten);
+    ```js
+    const buttonCancelForm = document.querySelector('.js-btn-cancel');
+    buttonAdd.addEventListener('click', cancelNewKitten);
 
-function cancelNewKitten(event) {
-  //completa o mueve el código para cancelar la creación de un nuevo gatito.
-}
-```
+    function cancelNewKitten(event) {
+      //completa o mueve el código para cancelar la creación de un nuevo gatito.
+    }
+    ```
 
 #### 5. Filtrar por descripción
 
@@ -88,33 +92,33 @@ Haz una nueva función `filterKitten(event)` asociada al evento clic del botón 
 
 1. Escucha el evento `clic` asociado al botón buscar:
 
-```js
-const buttonSearch = document.querySelector('.js-button-search');
-buttonSearch.addEventListener('click', filterKitten);
-```
+    ```js
+    const buttonSearch = document.querySelector('.js-button-search');
+    buttonSearch.addEventListener('click', filterKitten);
+    ```
 
-3. Obtén los valores que ha escrito la usuaria en el input de descripción, para ello utiliza el mismo código que hemos realizado en otras clases, solo elimina la línea de código `input_search_desc.value = 'risueño'; `:
+2. Obtén los valores que ha escrito la usuaria en el input de descripción, para ello utiliza el mismo código que hemos realizado en otras clases, solo elimina la línea de código `input_search_desc.value = 'risueño'; `:
 
-```js
-const input_search_desc = document.querySelector('.js_in_search_desc');
-const descrSearchText = input_search_desc.value;
-```
+    ```js
+    const input_search_desc = document.querySelector('.js_in_search_desc');
+    const descrSearchText = input_search_desc.value;
+    ```
 
-4. Haz la función manejadora asociada al evento anterior:
+3. Haz la función manejadora asociada al evento anterior:
 
-```js
-function filterKitten(event) {
-  if (kittenDesc1.includes(descrSearchText)) {
-    listElement.innerHTML += kittenOne;
-  }
-  if (kittenDesc2.includes(descrSearchText)) {
-    listElement.innerHTML += kittenTwo;
-  }
-  if (kittenDesc3.includes(descrSearchText)) {
-    listElement.innerHTML += kittenThree;
-  }
-}
-```
+    ```js
+    function filterKitten(event) {
+      if (kittenDesc1.includes(descrSearchText)) {
+        listElement.innerHTML += kittenOne;
+      }
+      if (kittenDesc2.includes(descrSearchText)) {
+        listElement.innerHTML += kittenTwo;
+      }
+      if (kittenDesc3.includes(descrSearchText)) {
+        listElement.innerHTML += kittenThree;
+      }
+    }
+    ```
 
 #### 6. Mostrar la raza o no
 

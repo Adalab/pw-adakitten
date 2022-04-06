@@ -29,28 +29,28 @@ Luego entonces vamos a validar si los `inputs` tienen valores y sino mostrar un 
 
 1. Busca los inputs del formulario y el label para el mensaje de error y añade las clases de js.
 
-```js
-const inputDesc = document.querySelector('.js-input-desc');
-const inputPhoto = document.querySelector('.js-input-photo');
-const inputName = document.querySelector('.js-input-name');
-const labelMesageError = document.querySelector('.js-label-error');
-```
+    ```js
+    const inputDesc = document.querySelector('.js-input-desc');
+    const inputPhoto = document.querySelector('.js-input-photo');
+    const inputName = document.querySelector('.js-input-name');
+    const labelMesageError = document.querySelector('.js-label-error');
+    ```
 
 2. Dentro del evento `click` del botón Añadir obtén los valores almacenados en los inputs y verifica si esos valores son distintos de "";
    a. Si son distintos de "" no hacéis nada.
    b. Si los valores son "" entonces mostrar el mensaje **"Debe rellenar todos los valores"**.
 
-```js
-const valueDesc = inputDesc.value;
-const valuePhoto = inputPhoto.value;
-const valueName = inputName.value;
+    ```js
+    const valueDesc = inputDesc.value;
+    const valuePhoto = inputPhoto.value;
+    const valueName = inputName.value;
 
-if (valueDesc === '' || valuePhoto === '' || valueName === '') {
-  //completa el código
-} else {
-  //completa el código
-}
-```
+    if (valueDesc === '' || valuePhoto === '' || valueName === '') {
+      //completa el código
+    } else {
+      //completa el código
+    }
+    ```
 
 ### 3. Validar formulario búsqueda
 
