@@ -43,14 +43,14 @@ Crea dos funciones para mostrar u ocultar el formulario para añadir un nuevo ga
 
 Si observamos nuestro código `js` vemos que el código para crear el listado de gatitos, la creación de cada elemento es un código repetitivo, entonces ¿se puede hacer una función que se utilice cada vez que se necesite crear un gatito?
 
-Crea una función que se llame `renderKitten()` que reciba como parámetros todos los datos que tenemos de un gatito (URL, descripción, nombre y raza). Esta función devuelve un `string` con todo el HTML que representa al gatito en la página.
+Crea una función que se llame `renderKitten()` que reciba como parámetros todos los datos que tenemos de un gatito (URL de la imagen, descripción, nombre y raza). Esta función devuelve un `string` con todo el HTML que representa al gatito en la página.
 
 En este ejercicio necesitas modificar el código que has trabajado en lecciones anteriores. Para ello:
 
 1. Crea la función `renderKitten()`
 
     ```js
-    function renderKitten(url, desc, name, race) {
+    function renderKitten(image, desc, name, race) {
       //completa el código
     }
     ```
