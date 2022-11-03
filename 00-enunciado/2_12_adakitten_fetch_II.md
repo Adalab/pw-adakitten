@@ -44,7 +44,7 @@ Y si además agregamos nuestros gatitos en el servidor, para que sean persistent
 
     ```json
     {
-      "url": "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg",
+      "image": "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg",
       "name": "Anastacio",
       "desc": "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!",
       "race": "British Shorthair"
@@ -56,13 +56,13 @@ Y si además agregamos nuestros gatitos en el servidor, para que sean persistent
 
     ```js
     //obtener la información de los gatitos del formulario
-    const newURL = inputPhoto.value;
+    const newImage = inputPhoto.value;
     const newDescription = inputDesc.value;
     const newName = inputName.value;
 
     //nuevo objeto con la info del gatito
     const newKittenDataObject = {
-      url: newURL,
+      image: newImage,
       name: newName,
       desc: newDescription,
       race: newRace,

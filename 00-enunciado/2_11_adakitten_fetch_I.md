@@ -11,7 +11,7 @@ a obtener la lista de gatitos desde un servidor. El servidor en cuestión devuel
         {
         "id": "16396904232462016",
         "owner": "adalabdigital",
-        "url": "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg",
+        "image": "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg",
         "name": "Anastacio",
         "desc": "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!",
         "race": "British Shorthair",
