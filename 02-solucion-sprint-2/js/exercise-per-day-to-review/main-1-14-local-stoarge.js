@@ -1,6 +1,6 @@
 //1. Guardar en el local storage
-const GITHUB_USER = 'adalab_digital';
-const SERVER_URL = `https://adalab-api.herokuapp.com/api/kittens/${GITHUB_USER}`;
+const GITHUB_USER = 'adalab';
+const SERVER_URL = `https://dev.adalab.es/api/kittens/${GITHUB_USER}`;
 
 let kittenDataList = [];
 
@@ -34,7 +34,7 @@ if (kittenListStored) {
 
 //Función para hacer la petición de guardar un gatito en el servidor
 function addNewKittenServer(newKittenDataObject) {
-  fetch(`https://adalab-api.herokuapp.com/api/kittens/${GITHUB_USER}`, {
+  fetch(`https://dev.adalab.es/api/kittens/${GITHUB_USER}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(newKittenDataObject),

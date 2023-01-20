@@ -17,22 +17,22 @@ const input_search_desc = document.querySelector('.js_in_search_desc');
 
 //Objetos con cada gatito
 const kittenData_1 = {
-    image: "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg",
+    image: "https://dev.adalab.es/gato-siames.webp",
     name: "Anastacio",
-    desc: "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!",
-    race: "British Shorthair",
+    desc: "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.",
+    race: "Siamés",
 };
 const kittenData_2 = {
-    image: "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_39/3021711/190923-cat-pet-stock-cs-1052a.jpg",
+    image: "https://dev.adalab.es/sphynx-gato.webp",
     name: "Fiona",
-    desc: "Juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!",
-    race: "British Shorthair",
+    desc: "Produce fascinación y curiosidad. Exótico, raro, bello, extraño… hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.",
+    race: "Sphynx",
 };
 const kittenData_3 = {
-    image: "https://images.emedicinehealth.com/images/article/main_image/cat-scratch-disease.jpg",
+    image: "https://dev.adalab.es/maine-coon-cat.webp",
     name: "Cielo",
-    desc: "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!",
-    race: "British Shorthair",
+    desc: " Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.",
+    race: "Maine Coon",
 };
 
 const kittenDataList = [kittenData_1, kittenData_2, kittenData_3];

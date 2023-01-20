@@ -1,8 +1,8 @@
 //1. Obtener listado de gatitos desde el servidor
 
 
-const GITHUB_USER = 'adalab_digital';
-const SERVER_URL = `https://adalab-api.herokuapp.com/api/kittens/${GITHUB_USER}`;
+const GITHUB_USER = 'adalab';
+const SERVER_URL = `ttps://dev.adalab.es/api/kittens/${GITHUB_USER}`;
 
 let kittenDataList = [];
 

@@ -7,11 +7,11 @@ input_search_desc.value = 'risueño';
 const descrSearchText = input_search_desc.value;
 
 
-const kittenImageOne = "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg";
+const kittenImageOne = "https://dev.adalab.es/gato-siames.webp";
 const kittenNameOne = "Anastacio";
 const kittenDescOne =
-  "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
-const kittenRaceOne = "British Shorthair"
+  "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.",
+const kittenRaceOne = "Siamés"
 
 const kittenOne =
   `<li class="card">
@@ -29,11 +29,11 @@ const kittenOne =
 </article>
 </li>`;
 
-const kittenImageTwo = "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_39/3021711/190923-cat-pet-stock-cs-1052a.jpg";
+const kittenImageTwo = "https://dev.adalab.es/sphynx-gato.webp";
 const kittenNameTwo = "Cielo";
 const kittenDescTwo =
-  "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
-const kittenRaceTwo = "British Shorthair"
+  "Produce fascinación y curiosidad. Exótico, raro, bello, extraño… hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.";
+const kittenRaceTwo = "Sphynx"
 
 const kittenTwo =
   `<li class="card">
@@ -51,11 +51,11 @@ const kittenTwo =
 </article>
 </li>`;
 
-const kittenImageThree = "https://images.emedicinehealth.com/images/article/main_image/cat-scratch-disease.jpg";
+const kittenImageThree = "https://dev.adalab.es/maine-coon-cat.webp";
 const kittenNameThree = "Fiona";
 const kittenDescThree =
-  "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
-const kittenRaceThree = "British Shorthair"
+  "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.";
+const kittenRaceThree = "Maine Coon"
 
 const kittenThree =
   `<li class="card">
