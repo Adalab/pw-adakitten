@@ -92,7 +92,7 @@ function addNewKitten(event) {
   const valueName = inputName.value;
   const valueRace = inputRace.value;
 
-  if (valueDesc === '' && valuePhoto === '' && valueName === '') {
+  if (valueDesc === '' || valuePhoto === '' || valueName === '') {
     labelMesageError.innerHTML = 'Debe rellenar todos los valores';
   } else {
     if (valueDesc !== '' && valuePhoto !== '' && valueName !== '') {
