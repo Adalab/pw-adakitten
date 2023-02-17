@@ -87,10 +87,9 @@ function addNewKitten(event) {
     const valueName = inputName.value;
     if (valueDesc === "" || valuePhoto === "" || valueName === "") {
         labelMessageError.innerHTML = "¡Uy! parece que has olvidado algo";
-    } else {
-        if (valueDesc !== "" && valuePhoto !== "" && valueName !== "") {
-            labelMessageError.innerHTML = "";
-        }
+    }
+    else if (valueDesc !== "" && valuePhoto !== "" && valueName !== "") {
+        labelMessageError.innerHTML = "";
     }
 }
 //Cancelar la búsqueda de un gatito
