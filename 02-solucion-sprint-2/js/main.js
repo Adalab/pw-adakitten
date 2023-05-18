@@ -11,11 +11,11 @@ const inputPhoto = document.querySelector('.js-input-photo');
 const inputName = document.querySelector('.js-input-name');
 const inputRace = document.querySelector('.js-input-race');
 const linkNewFormElememt = document.querySelector('.js-button-new-form');
-const labelMesSageError = document.querySelector('.js-label-error');
+const labelMessageError = document.querySelector('.js-label-error');
 const input_search_desc = document.querySelector('.js_in_search_desc');
 const input_search_race = document.querySelector('.js_in_search_race');
 
-const GITHUB_USER = 'adalab';
+const GITHUB_USER = 'adalab-unused';
 const SERVER_URL = `https://dev.adalab.es/api/kittens/${GITHUB_USER}`;
 
 const kittenListStored = JSON.parse(localStorage.getItem('kittensList'));
@@ -74,6 +74,7 @@ function showNewCatForm() {
 }
 function hideNewCatForm() {
   newFormElement.classList.add('collapsed');
+  labelMessageError.innerHTML = '';
 }
 
 function handleClickNewCatForm(event) {
@@ -93,10 +94,10 @@ function addNewKitten(event) {
   const valueRace = inputRace.value;
 
   if (valueDesc === '' || valuePhoto === '' || valueName === '') {
-    labelMesageError.innerHTML = 'Debe rellenar todos los valores';
+    labelMessageError.innerHTML = 'Debe rellenar todos los valores';
   } else {
     if (valueDesc !== '' && valuePhoto !== '' && valueName !== '') {
-      labelMesageError.innerHTML = '';
+      labelMessageError.innerHTML = '';
       //Construir un nuevo objeto con el gatito
       const newKittenDataObject = {
         image: valuePhoto,
@@ -115,17 +116,20 @@ function cancelNewKitten(event) {
   inputDesc.value = '';
   inputPhoto.value = '';
   inputName.value = '';
+  inputRace.value = '';
+  labelMessageError.innerHTML = '';
 }
 
 //Filtrar por descripción
 function filterKitten(event) {
   event.preventDefault();
   const descrSearchText = input_search_desc.value;
+  const raceSearchText = input_search_race.value;
   listElement.innerHTML = '';
   const dataKittenFiltered = kittenDataList
     .filter((kitten) => kitten.desc.includes(descrSearchText))
     //Filtrar por raza además
-    .filter((kitten) => kitten.race === raceSearchText);
+    .filter((kitten) => raceSearchText === '' || kitten.race.toLocaleLowerCase() === raceSearchText.toLocaleLowerCase());
   renderKittenList(dataKittenFiltered);
 }
 
@@ -151,12 +155,12 @@ function addNewKittenServer(newKittenDataObject) {
         inputRace.value = '';
 
         //Mostrar mensaje de que se ha creado correctamente
-        labelMesageError.innerHTML = 'Mola! Un nuevo gatito en Adalab!';
+        labelMessageError.innerHTML = 'Mola! Un nuevo gatito en Adalab!';
 
         //vuelve a pintar el listado de gatitos
         renderKittenList(kittenDataList);
       } else {
-        labelMesageError.innerHTML = 'No se ha podido guardar el gatito en el servidor. Inténtalo más tarde.';
+        labelMessageError.innerHTML = 'No se ha podido guardar el gatito en el servidor. Inténtalo más tarde.';
       }
     });
 }
