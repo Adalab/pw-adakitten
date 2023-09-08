@@ -32,15 +32,25 @@ const kittenData_2 = {
 };
 const kittenData_3 = {
     image: "https://dev.adalab.es/maine-coon-cat.webp",
-    name: "Cielo",
+    name: "Sofia",
     desc: " Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.",
-    race: "Maine Coon",
+    race: "",
 };
 
 const kittenDataList = [kittenData_1, kittenData_2, kittenData_3];
 
 //Funciones
 function renderKitten(kittenData) {
+
+
+    let html = '';
+    if (kittenData.race === "") {
+        html = `Uy que despiste, no sabemos su raza`;
+      } else {
+        html = kittenData.race;
+      }
+
+
     const kitten = `<li class="card">
     <article>
       <img
@@ -49,7 +59,7 @@ function renderKitten(kittenData) {
         alt="gatito"
       />
       <h3 class="card_title">${kittenData.name}</h3>
-      <h3 class="card_race">${kittenData.race}</h3>
+      <h3 class="card_race">${html}</h3>
       <p class="card_description">
       ${kittenData.desc}
       </p>
